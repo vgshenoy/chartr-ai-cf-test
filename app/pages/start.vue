@@ -18,6 +18,7 @@ useHead({
 })
 
 const { data: suggestions } = await useFetch('/api/chats/suggestions')
+console.log(suggestions.value)
 
 definePageMeta({
   layout: 'header-layout',

@@ -31,15 +31,21 @@ export default defineNuxtConfig({
   ],
 
   content: {
-    highlight: {
-      theme: 'github-dark',
-    },
-    markdown: {
+    renderer: {
       anchorLinks: false,
-      toc: {
-        depth: 2,
+
+    },
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+        },
+        toc: {
+          depth: 2,
+        },
       },
     },
+
   },
 
   mdc: {
@@ -83,6 +89,12 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    optimizeDeps: {
+      include: ['secure-json-parse'],
+    },
+  },
+
   typescript: {
     strict: false,
   },
@@ -105,7 +117,7 @@ export default defineNuxtConfig({
       login: '/login',
       callback: '/confirm',
       exclude: publicRoutes,
-      cookieRedirect: true,
+      saveRedirectToCookie: true,
     },
   },
 
