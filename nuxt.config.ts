@@ -9,13 +9,13 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 export default defineNuxtConfig({
 
   modules: [
-    '@nuxt/ui',
+    // '@nuxt/ui',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
-    '@nuxtjs/mdc',
-    '@nuxtjs/plausible',
-    '@nuxtjs/supabase',
+    // '@nuxtjs/mdc',
+    // '@nuxtjs/plausible',
+    // '@nuxtjs/supabase',
     '@vueuse/nuxt',
   ],
   devtools: { enabled: true },
